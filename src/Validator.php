@@ -83,8 +83,8 @@ class Validator {
 
     public function validatePipelines(array $data){
         foreach ($data as $key => $value) {
-            if(!is_string($value)){
-                $this->addError('Pipeline '.$key. ' isnt a string.');
+            if(is_string($value)){
+                $this->addError('Pipeline '.$key. ' is a string.');
             }
         }
 
